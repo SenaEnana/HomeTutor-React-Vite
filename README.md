@@ -1,73 +1,90 @@
-# React + TypeScript + Vite
+# Student Teacher Agent (HomeTutor System) — Frontend Practice
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive frontend application for a HomeTutor system, built to explore the speed, configuration, and developer experience of **Vite** coupled with **React**. 
 
-Currently, two official plugins are available:
+*Note: This repository is a frontend-only implementation focused on UI/UX layout and build tool experimentation. It is distinct from other versions of this project built using Webpack or Vanilla JavaScript.*
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 Purpose & Learning Objectives
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+The main goal of this project was to transition away from traditional Webpack setups and get hands-on experience with Vite. Key areas of focus included:
+*   **Lightning-Fast HMR (Hot Module Replacement):** Observing real-time updates during UI development.
+*   **Vite Configuration:** Managing environment variables and asset hosting within the Vite ecosystem.
+*   **Optimized Bundling:** Utilizing Rollup (under the hood in Vite) for clean production builds.
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+*   **Build Tool:** [Vite](https://vitejs.dev/)
+*   **Frontend Library:** [React](https://react.dev/)
+*   **Language:** TypeScript (ES6+)
+*   **Styling:** Tailwind CSS
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 📦 Getting Started
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Follow these steps to get a local copy of the project up and running.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Prerequisites
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Make sure you have [Node.js](https://nodejs.org/) installed (version 18+ recommended).
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone [https://github.com/SenaEnana/HomeTutor-React-Vite.git](https://github.com/SenaEnana/HomeTutor-React-Vite.git)
+   ```
+2. Navigate into the project directory:
+   ```bash
+   cd student-teacher-agent
+   ```
+### Development Server
+
+    Launch the Vite local development server:
+    ```bash
+    npm run dev
+    ```
+    The application will typically be accessible at http://localhost:5173/.
+
+### Production Build
+
+    To build the static frontend assets for production:
+    ```bash
+    npm run build
+    ```
+
+---
+
+## 🗺️ Project Structure
+  ```bash
+  student-teacher-agent/
+├── public/          # Static assets (images, icons)
+├── src/
+│   ├── components/  # Reusable UI components (Navbar, Sidebar, Cards)
+│   ├── views/       # Main page layouts (Dashboard, TutorList, Profile)
+│   ├── App.jsx      # Main application component
+│   └── main.jsx     # Vite/React entry point
+├── index.html       # Single Page Application entry (moved to root by Vite)
+├── vite.config.js   # Vite specific configurations
+└── package.json
+  ```
+
+---
+
+## 📝 Key Features Mimicked
+
+Even as a frontend-only practice run, the UI is mapped out to simulate a functional HomeTutor platform:
+
+* Tutor Discovery: Browsing and filtering available tutors based on subject or rating.
+
+* Student/Teacher Dashboards: Separate contextual views for both agent profiles.
+
+* Booking System UI: Clean forms and schedules simulating how a user would book a session.
+
+---
+
+## 👨‍💻 Author
+
+Sena Adane
