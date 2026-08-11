@@ -42,18 +42,18 @@ Make sure you have [Node.js](https://nodejs.org/) installed (version 18+ recomme
    ```
 ### Development Server
 
-    Launch the Vite local development server:
-    ```bash
+   Launch the Vite local development server:
+   ```bash
     npm run dev
-    ```
-    The application will typically be accessible at http://localhost:5173/.
+   ```
+   The application will typically be accessible at http://localhost:5173/.
 
 ### Production Build
 
-    To build the static frontend assets for production:
-    ```bash
+   To build the static frontend assets for production:
+   ```bash
     npm run build
-    ```
+   ```
 
 ---
 
